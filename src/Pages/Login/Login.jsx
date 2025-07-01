@@ -290,10 +290,10 @@ const Login = () => {
       >
         <h4 className="mb-3">Contact Us</h4>
         <p>
-          <FaPhoneAlt className="me-2 text-primary" /> +91 98765 43210
+          <FaPhoneAlt className="me-2 text-primary" /> +91 8121927536
         </p>
         <p>
-          <FaEnvelope className="me-2 text-primary" /> support@example.com
+          <FaEnvelope className="me-2 text-primary" /> Contact@afri-trading.com
         </p>
       </Card>
     </div>
@@ -343,10 +343,10 @@ const Login = () => {
                                 >
                                     <h4 className="mb-3">Contact Us</h4>
                                     <p>
-                                        <FaPhoneAlt className="me-2 text-primary" /> +91 98765 43210
+                                        <FaPhoneAlt className="me-2 text-primary" /> +91 8121927536
                                     </p>
                                     <p>
-                                        <FaEnvelope className="me-2 text-primary" /> support@example.com
+                                        <FaEnvelope className="me-2 text-primary" /> contact@afri-trading.com
                                     </p>
                                 </Card>
                             </div>

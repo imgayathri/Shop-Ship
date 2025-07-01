@@ -67,8 +67,8 @@ const CustomNavbar = () => {
         <div className="navbar-right-section">
 
           <div className="top-info">
-            <FaPhoneAlt className="info-icon" /> +91 98765 43210
-            <FaEnvelope className="info-icon ms-3" /> info@afritrading.com
+            <FaPhoneAlt className="info-icon" /> +91 8121927536
+            <FaEnvelope className="info-icon ms-3" /> contact@afritrading.com
           </div>
 
           <div className="myorders">
