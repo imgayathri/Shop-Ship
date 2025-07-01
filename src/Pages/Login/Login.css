@@ -1,0 +1,51 @@
+/* src/styles/Auth.css */
+
+.auth-container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.auth-left {
+  flex: 1;
+  background-color: #1F5D44;
+ 
+  border-bottom-right-radius:85%;
+  text-align: center;
+  padding: 2rem;
+  min-width: 300px;
+}
+
+.join-with-style {
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: 0 !important;
+  background-color: #1F5D44; /* or your desired color */
+}
+
+
+.auth-right {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+.auth-card {
+  min-width: 500px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.signin-button{
+    background-color: #E05C0B !important;
+    border-color: #E05C0B !important;
+}
+
+.signup-button{
+    background-color: #E05C0B !important;
+    border-color: #E05C0B !important;
+}
