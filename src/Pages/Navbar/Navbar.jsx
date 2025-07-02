@@ -16,8 +16,9 @@ import { FaSearch } from 'react-icons/fa';
 
 const CustomNavbar = () => {
   const [showLogout, setShowLogout] = useState(false);
-    const [searchText, setSearchText] = useState(''); 
+  const [searchText, setSearchText] = useState(''); 
   const navigate = useNavigate();
+  const name = localStorage.getItem('name');
 
   const handleLogout = () => {
     localStorage.clear();
@@ -84,6 +85,7 @@ const CustomNavbar = () => {
             </Dropdown.Menu>
           </Dropdown>
         </div>
+       <h5 style={{color:'white'}}> {name} </h5>
       </Container>
     </Navbar>
   );
