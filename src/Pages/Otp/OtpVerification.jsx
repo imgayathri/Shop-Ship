@@ -3,6 +3,7 @@ import { Modal, Button } from 'react-bootstrap';
 import './OtpVerification.css';
 import WelcomeModal from '../WelcomeModal/WelcomeModal';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../../services/apiServices';
 
 
 
@@ -34,7 +35,7 @@ const OtpVerification = ({ show, onHide, email, phone }) => {
     }
 
     try {
-      const response = await fetch("https://auto-spare-parts-backend-gbsc.onrender.com/allusers/verifyUser", {
+      const response = await fetch(API_URL.Otp, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, phone, otp })
@@ -66,7 +67,7 @@ const OtpVerification = ({ show, onHide, email, phone }) => {
   // Resend OTP
   const handleResendOtp = async () => {
     try {
-      const response = await fetch("https://auto-spare-parts-backend-gbsc.onrender.com/allusers/resendOtp", {
+      const response = await fetch(API_URL.ResendOtp, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, phone })

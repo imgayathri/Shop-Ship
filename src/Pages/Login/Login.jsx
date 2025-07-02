@@ -6,6 +6,7 @@ import Logo from './../../assets/images/logo afri-trading.jpeg';
 import OtpVerification from '../Otp/OtpVerification';
 import { useNavigate } from 'react-router-dom';
 import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { API_URL } from '../../services/apiServices';
 
 const Login = () => {
     const [isLogin, setIsLogin] = useState(true);
@@ -26,12 +27,12 @@ const Login = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("https://auto-spare-parts-backend-gbsc.onrender.com/locations/getAllCountries")
+        fetch(API_URL.Countries)
             .then((res) => res.json())
             .then((data) => setCountries(data.data || []))
             .catch((err) => console.error("Error fetching countries:", err));
 
-        fetch("https://auto-spare-parts-backend-gbsc.onrender.com/locations/getAllCities")
+        fetch(API_URL.Cities)
             .then((res) => res.json())
             .then((data) => setCities(data.data || []))
             .catch((err) => console.error("Error fetching cities:", err));
@@ -61,7 +62,7 @@ const Login = () => {
         }
 
         try {
-            const response = await fetch("https://auto-spare-parts-backend-gbsc.onrender.com/allusers/registerUser", {
+            const response = await fetch(API_URL.Register, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
@@ -90,7 +91,7 @@ const Login = () => {
         }
 
         try {
-            const response = await fetch("https://auto-spare-parts-backend-gbsc.onrender.com/allusers/userLogin", {
+            const response = await fetch(API_URL.Login, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ emailOrPhone, password })
