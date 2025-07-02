@@ -14,7 +14,7 @@ function App() {
   if (screen !== "splash") {
     return (
       <div>
-      <Router>
+      
         <Routes>
           <Route
             path="/"
@@ -31,7 +31,6 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        </Router>
         </div>
       
     );
