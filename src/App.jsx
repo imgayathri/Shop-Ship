@@ -6,6 +6,7 @@ import Register from "./Pages/Register/Register";
 import SplashScreen from "./Pages/SplashScreen/SplashScreen";
 import Home from "./Pages/Home/Home"; // 👈 create this component
 import "bootstrap/dist/css/bootstrap.min.css";
+import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
   const [screen, setScreen] = useState("splash");
@@ -16,7 +17,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Navigate to="/login" />}
+            element={<Login />}
           />
           <Route
             path="/login"
@@ -27,6 +28,7 @@ function App() {
             element={<Register switchToLogin={() => setScreen("login")} />}
           />
           <Route path="/home" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       
     );

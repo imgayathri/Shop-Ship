@@ -278,17 +278,16 @@ const Login = () => {
       />
       <h1 className="text-white" style={{ fontSize: '24px' }}>Welcome to Shop & Ship</h1>
       <p className="text-white" style={{ fontSize: '14px' }}>
-        We receive your packages at our warehouse, consolidate them if needed,<br />
-        and forward them straight to your door — safely and quickly.
+        We receive your packages at our warehouse, consolidate and shiped to you safely.
       </p>
     </div>
 
-    <div className="d-flex justify-content-center mt-4 w-100">
+    <div className="d-flex justify-content-center mt-4 w-100" style={{marginRight:'64px'}}>
       <Card
-        className="p-4 shadow-sm"
+        className="p-4 shadow-sm "
         style={{ maxWidth: '300px', width: '100%', borderRadius: '12px' }}
       >
-        <h4 className="mb-3">Contact Us</h4>
+        <h4 className="mb-3" style={{fontSize:'20px'}}>Contact Us</h4>
         <p>
           <FaPhoneAlt className="me-2 text-primary" /> +91 8121927536
         </p>
@@ -329,8 +328,7 @@ const Login = () => {
                                 className="text-white"
                                 style={{ fontSize: '15px', maxWidth: '500px', margin: '0 auto' }}
                             >
-                                We receive your packages at our warehouse, consolidate them if needed, and
-                                forward them straight to your door — safely and quickly.
+                                We receive your packages at our warehouse, consolidate and shiped to you safely.
                             </p>
 
 
@@ -341,7 +339,7 @@ const Login = () => {
                                     className="p-4 shadow-sm"
                                     style={{ maxWidth: '350px', width: '100%', borderRadius: '12px' }}
                                 >
-                                    <h4 className="mb-3">Contact Us</h4>
+                                    <h4 className="mb-3" style={{fontSize:'20px'}}>Contact Us</h4>
                                     <p>
                                         <FaPhoneAlt className="me-2 text-primary" /> +91 8121927536
                                     </p>

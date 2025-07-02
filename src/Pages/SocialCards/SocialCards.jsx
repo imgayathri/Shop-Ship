@@ -1,9 +1,6 @@
 // src/components/SocialCards.jsx
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { FaShoppingCart } from 'react-icons/fa';
-
-
 import ajio from './../../assets/images/ajio.png';
 import myntra from './../../assets/images/myntra.jpg';
 import meesho from './../../assets/images/meesho.jpg';
