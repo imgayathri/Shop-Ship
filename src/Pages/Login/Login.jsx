@@ -71,7 +71,7 @@ const Login = () => {
             if (!response.ok) {
                 const errorData = await response.json();
                 console.error("Registration failed:", errorData);
-                alert("Registration failed. Please try again.");
+                alert("User already exists.Try with another mail");
                 return;
             }
 
