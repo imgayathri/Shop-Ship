@@ -71,7 +71,8 @@ const Login = () => {
             if (!response.ok) {
                 const errorData = await response.json();
                 console.error("Registration failed:", errorData);
-                alert("User already exists.Try with another mail");
+                const errorMessage = errorData.message || "Registration failed. Please try again.";
+                alert(`Registration failed:${errorMessage}`);
                 return;
             }
 
@@ -237,7 +238,7 @@ const Login = () => {
                     {isLogin ? "Sign in" : "CONTINUE & GET OTP"}
                 </Button>
 
-               
+
 
                 <div className="text-center">
                     <small>
@@ -268,41 +269,41 @@ const Login = () => {
     return (
         <Row className="auth-container vw-100 vh-100">
             {isLogin ? (
-               <>
-  <Col lg={6} className="auth-left d-flex flex-column align-items-center justify-content-center">
-    <div className="d-flex flex-column align-items-center justify-content-center text-center">
-      <img
-        src={Logo}
-        alt="Company Logo"
-        className="mb-3"
-        style={{ width: '150px', height: '150px' }}
-      />
-      <h1 className="text-white" style={{ fontSize: '24px' }}>Welcome to Shop & Ship</h1>
-      <p className="text-white" style={{ fontSize: '14px' }}>
-        We receive your packages at our warehouse, consolidate and shiped to you safely.
-      </p>
-    </div>
+                <>
+                    <Col lg={6} className="auth-left d-flex flex-column align-items-center justify-content-center">
+                        <div className="d-flex flex-column align-items-center justify-content-center text-center">
+                            <img
+                                src={Logo}
+                                alt="Company Logo"
+                                className="mb-3"
+                                style={{ width: '150px', height: '150px' }}
+                            />
+                            <h1 className="text-white" style={{ fontSize: '24px' }}>Welcome to Shop & Ship</h1>
+                            <p className="text-white" style={{ fontSize: '14px' }}>
+                                We receive your packages at our warehouse, consolidate and shiped to you safely.
+                            </p>
+                        </div>
 
-    <div className="d-flex justify-content-center mt-4 w-100" style={{marginRight:'64px'}}>
-      <Card
-        className="p-4 shadow-sm "
-        style={{ maxWidth: '300px', width: '100%', borderRadius: '12px' }}
-      >
-        <h4 className="mb-3" style={{fontSize:'20px'}}>Contact Us</h4>
-        <p>
-          <FaPhoneAlt className="me-2 text-primary" /> +91 8121927536
-        </p>
-        <p>
-          <FaEnvelope className="me-2 text-primary" /> Contact@afri-trading.com
-        </p>
-      </Card>
-    </div>
-  </Col>
+                        <div className="d-flex justify-content-center mt-4 w-100" style={{ marginRight: '64px' }}>
+                            <Card
+                                className="p-4 shadow-sm "
+                                style={{ maxWidth: '300px', width: '100%', borderRadius: '12px' }}
+                            >
+                                <h4 className="mb-3" style={{ fontSize: '20px' }}>Contact Us</h4>
+                                <p>
+                                    <FaPhoneAlt className="me-2 text-primary" /> +91 8121927536
+                                </p>
+                                <p>
+                                    <FaEnvelope className="me-2 text-primary" /> Contact@afri-trading.com
+                                </p>
+                            </Card>
+                        </div>
+                    </Col>
 
-  <Col lg={6} className="auth-right d-flex align-items-center justify-content-center">
-    {renderFormCard()}
-  </Col>
-</>
+                    <Col lg={6} className="auth-right d-flex align-items-center justify-content-center">
+                        {renderFormCard()}
+                    </Col>
+                </>
 
             ) : (
                 <>
@@ -340,7 +341,7 @@ const Login = () => {
                                     className="p-4 shadow-sm"
                                     style={{ maxWidth: '350px', width: '100%', borderRadius: '12px' }}
                                 >
-                                    <h4 className="mb-3" style={{fontSize:'20px'}}>Contact Us</h4>
+                                    <h4 className="mb-3" style={{ fontSize: '20px' }}>Contact Us</h4>
                                     <p>
                                         <FaPhoneAlt className="me-2 text-primary" /> +91 8121927536
                                     </p>
