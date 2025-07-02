@@ -1,6 +1,6 @@
 // src/App.jsx
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import SplashScreen from "./Pages/SplashScreen/SplashScreen";
@@ -14,7 +14,7 @@ function App() {
   if (screen !== "splash") {
     return (
       <div>
-      
+      <Router>
         <Routes>
           <Route
             path="/"
@@ -31,6 +31,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Router>
         </div>
       
     );
